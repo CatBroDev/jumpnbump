@@ -16,7 +16,7 @@ export SDL_CFLAGS
 export DEFINES
 export INCLUDES
 
-LDFLAGS ?= -O3 -flto -fno-rtti -fno-exceptions -sASYNCIFY -sASYNCIFY_ONLY=["main","game_loop","Mix_FreeMusic","dj_ready_mod","flippage","intr_sysupdate","SDL_Delay","GLES2_RenderPresent","Emscripten_GLES_SwapWindow","dynCall_v"] -sASYNCIFY_IGNORE_INDIRECT -sENVIRONMENT=web --preload-file assets --closure 1
+LDFLAGS ?= -O3 -flto -fno-rtti -fno-exceptions -sASYNCIFY -sASYNCIFY_ONLY=["main","game_loop","Mix_FreeMusic","dj_ready_mod","flippage","intr_sysupdate","SDL_Delay","SDL_RenderPresent","GLES2_RenderPresent","Emscripten_GLES_SwapWindow","dynCall_v"] -sASYNCIFY_IGNORE_INDIRECT -sENVIRONMENT=web --preload-file assets --closure 1
 SDL_LIBS = `sdl2-config --libs`
 LIBS = $(SDL_LIBS) -sUSE_SDL_MIXER=2 -sSDL2_MIXER_FORMATS='["mod"]'
 
