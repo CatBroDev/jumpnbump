@@ -181,6 +181,11 @@ void open_screen(void)
 	}
 
 	flags = SDL_WINDOW_RESIZABLE;
+#ifdef __EMSCRIPTEN__
+    /* The game draws an indexed 2D surface. Canvas software presentation avoids
+     * a redundant GL/vsync main-loop registration alongside Asyncify. */
+    SDL_SetHint(SDL_HINT_RENDER_DRIVER, "software");
+#endif
 	if (fullscreen)
 		flags |= SDL_WINDOW_FULLSCREEN_DESKTOP;
 	SDL_CreateWindowAndRenderer(screen_width, screen_height, flags, &sdlWindow, &sdlRenderer);

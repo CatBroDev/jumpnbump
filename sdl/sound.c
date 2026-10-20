@@ -24,6 +24,7 @@
  */
 
 #include "globals.h"
+#include "web_bridge.h"
 #include <limits.h>
 #ifndef _WIN32
 #include <unistd.h>
@@ -243,6 +244,15 @@ void mix_sound(void *unused, Uint8 *stream, int len)
 	}
 }
 
+/* Post-mix gate mutes both MOD music and the original custom sound effects. */
+static void browser_mix_sound(void *unused, Uint8 *stream, int len)
+{
+    mix_sound(unused, stream, len);
+#ifdef __EMSCRIPTEN__
+    if (oga_muted || oga_paused) memset(stream, 0, len);
+#endif
+}
+
 /* misc handling */
 
 char dj_init(void)
@@ -273,7 +283,7 @@ char dj_init(void)
 
 	Mix_SetMusicCMD(getenv("MUSIC_CMD"));
 
-	Mix_SetPostMix(mix_sound, NULL);
+	Mix_SetPostMix(browser_mix_sound, NULL);
 #else
 	main_info.no_sound = 1;
 	return 1;

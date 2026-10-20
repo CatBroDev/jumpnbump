@@ -18,3 +18,7 @@ jnbpack
 jnbunpack
 jumpnbump
 sdl.a
+
+# Generated browser outputs and local test dependencies
+/build/
+/browser/node_modules/

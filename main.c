@@ -41,7 +41,7 @@
 
 #include "network.h"
 
-#include <emscripten.h>
+#include "web_bridge.h"
 
 #ifndef M_PI
 #define M_PI 3.14159265358979323846
@@ -518,6 +518,9 @@ static void game_loop(void)
 
 	intr_sysupdate();
 
+#ifdef __EMSCRIPTEN__
+    oga_scene = 2;
+#endif
 	endscore_reached = 0;
 	while (1) {
 		while (update_count) {
@@ -753,6 +756,9 @@ static int menu_loop(void)
 		main_info.draw_page = 1;
 
 		game_loop();
+#ifdef __EMSCRIPTEN__
+        oga_scene = 0;
+#endif
 
 #ifdef USE_NET
 		if (is_net) {
@@ -858,6 +864,10 @@ static int menu_loop(void)
 		dj_start_mod();
 		dj_set_nosound(0);
 
+#ifdef __EMSCRIPTEN__
+        oga_scene = 3;
+        oga_release_all();
+#endif
 		while (key_pressed(1) == 0) {
 			if (mod_vol < 35)
 				mod_vol++;
@@ -904,7 +914,7 @@ static int menu_loop(void)
 
 int main(int argc, char *argv[])
 {
-	emscripten_set_main_loop(game_loop, 0, 0);
+	/* Asyncify yields the existing menu/game/results loop; do not register a second game loop. */
 	int result;
 
 	if (init_program(argc, argv, pal) != 0)
@@ -2594,6 +2604,10 @@ all provided the user didn't choose one on the commandline. */
 
 void deinit_program(void)
 {
+#ifdef __EMSCRIPTEN__
+    oga_scene = 4;
+    EM_ASM({ if (Module.onGameStopped) Module.onGameStopped(); });
+#endif
 #ifdef DOS
 	__dpmi_regs regs;
 #endif

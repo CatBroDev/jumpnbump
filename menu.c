@@ -26,6 +26,7 @@
  */
 
 #include "globals.h"
+#include "web_bridge.h"
 
 char *menu_background;
 
@@ -105,8 +106,23 @@ int menu(void)
 	esc_pressed = key_pressed(1);
 	end_loop_flag = new_game_flag = 0;
 
+#ifdef __EMSCRIPTEN__
+    oga_scene = 1;
+#endif
 	update_count = 1;
 	while (1) {
+#ifdef __EMSCRIPTEN__
+        if (oga_solo_request) {
+            for (c1 = 0; c1 < JNB_MAX_PLAYERS; c1++) {
+                player[c1].enabled = 1;
+                ai[c1] = c1 != 0;
+            }
+            oga_solo_request = 0;
+            oga_release_all();
+            menu_deinit();
+            return 0;
+        }
+#endif
 
 		dj_mix();
 

@@ -32,12 +32,14 @@
 #include <unistd.h>
 #endif
 #include "globals.h"
+#include "web_bridge.h"
 
-char keyb[256];
+char keyb[SDL_NUM_SCANCODES];
 char last_keys[50];
 
 int addkey(unsigned int key)
 {
+	if ((key & 0x7fff) >= SDL_NUM_SCANCODES) return -1;
 	if (!(key & 0x8000))
 		keyb[key & 0x7fff] = 1;
 	else
@@ -67,7 +69,7 @@ int hook_keyb_handler(void)
 
 int key_pressed(int key)
 {
-	return keyb[(unsigned char) key];
+	return key >= 0 && key < SDL_NUM_SCANCODES ? keyb[key] : 0;
 }
 
 int intr_sysupdate()
@@ -77,14 +79,34 @@ int intr_sysupdate()
 	static int last_time = 0;
 	int now, time_diff;
 
+#ifdef __EMSCRIPTEN__
+    while (oga_paused) {
+        emscripten_sleep(20);
+        last_time = SDL_GetTicks();
+    }
+    if (oga_stop_requested) { deinit_program(); exit(0); }
+    oga_ticks++;
+#endif
 	while (SDL_PollEvent(&e)) {
 		switch (e.type) {
+			case SDL_WINDOWEVENT:
+                if (e.window.event == SDL_WINDOWEVENT_FOCUS_LOST) {
+                    memset(keyb, 0, sizeof(keyb));
+                    last_time = SDL_GetTicks();
+                }
+                break;
 			case SDL_QUIT:
 				SDL_Quit();
 				exit(1);
 				break;
 			case SDL_MOUSEBUTTONDOWN:
 			case SDL_MOUSEBUTTONUP:
+#ifdef __EMSCRIPTEN__
+				/* Browser canvas clicks only focus the game. The old mouse
+				 * scheme steers Fizz, while our on-screen keys steer Dott.
+				 * Mixing them makes a focus click move a different rabbit. */
+				break;
+#else
 				if (e.button.state == SDL_PRESSED &&
 					((key_pressed(KEY_PL3_LEFT) && e.button.button == SDL_BUTTON_RIGHT) ||
 					 (key_pressed(KEY_PL3_RIGHT) && e.button.button == SDL_BUTTON_LEFT) ||
@@ -120,6 +142,7 @@ int intr_sysupdate()
 					addkey(scancode);
 				}
 				break;
+#endif
 			case SDL_KEYDOWN:
 			case SDL_KEYUP:
 				if (e.key.repeat != 0) {
@@ -198,6 +221,8 @@ int intr_sysupdate()
 	SDL_Delay(1);
 	now = SDL_GetTicks();
 	time_diff = now - last_time;
+    /* Do not replay minutes of physics after a suspended browser tab. */
+    if (time_diff > 100) time_diff = 100;
 	if (time_diff > 0) {
 		i = time_diff / (1000 / 60);
 		if (i) {

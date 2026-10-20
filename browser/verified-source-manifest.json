@@ -1,0 +1,310 @@
+[
+  {
+    "path": ".clang-format",
+    "sha256": "8db9b87c9d628aa0eb325915d0f41672836f2b2e49c7dcbb5afcef4cfa003c8a"
+  },
+  {
+    "path": "AUTHORS",
+    "sha256": "2d5af15b2a12c2efe78fe54b528b689b166ea0b88fcdc4126ed4160a236e0cbe"
+  },
+  {
+    "path": "build-mingw.sh",
+    "sha256": "0b550f9831a577b5b6505182205f4a489323fa61c5bb2241311f0f449601e439"
+  },
+  {
+    "path": "ChangeLog",
+    "sha256": "699c39a59afc62d345b72a1719dfdc96bfcb2379bfa97b5a211e0f2cd6a7efe4"
+  },
+  {
+    "path": "config.h",
+    "sha256": "5334c1f53ac89f25edd9b658f9ce2d5c74dc35c58bf4164aa892b3c383684c6d"
+  },
+  {
+    "path": "COPYING",
+    "sha256": "5bf17ca4c8625480e92032eddccade4d34d3a1fb4285b808a9c1cf3699353a80"
+  },
+  {
+    "path": "data/bump.mod",
+    "sha256": "6ee3e964cc8442eeab1d07bd2391ce3def80879290128d56219da98eb36ed053"
+  },
+  {
+    "path": "data/calib.dat",
+    "sha256": "7608aafc2751c59a4765c283872bfae3373d6564d3ca02639fe0bd678c50297b"
+  },
+  {
+    "path": "data/death.smp",
+    "sha256": "de677a6bd9e9a366f0a203a351453846db38cd1b5b47792de95d74424756fe61"
+  },
+  {
+    "path": "data/fly.smp",
+    "sha256": "cd7cc69543bd37adbd1c80152d74d6821af81e19e243d090599c6ef7fe1bea55"
+  },
+  {
+    "path": "data/font.pcx",
+    "sha256": "6c16cb314f9c459165b92fe075faa83889b4d80e745dfcb897eac10ecfb9feb2"
+  },
+  {
+    "path": "data/font.txt",
+    "sha256": "deaee4ed6281a089dc04408ad09d1f0a8331a931b3248c277c23a03b35c6ed45"
+  },
+  {
+    "path": "data/jump.mod",
+    "sha256": "0c62dbb04ed921cce3c624386fea479244c3e73c0af80637c0eeddfd4c6846ec"
+  },
+  {
+    "path": "data/jump.smp",
+    "sha256": "48c15996478d9ce4b88a1e034eb48f2b96c65f9dedd94b3704fe22e85f7b8910"
+  },
+  {
+    "path": "data/level.pcx",
+    "sha256": "84eeb895b81ccb709d356a4bf792b668e6ed7ea71aae14d038aff6321c42d10c"
+  },
+  {
+    "path": "data/levelmap.txt",
+    "sha256": "1ffe3b763523e651b0251ce7a65d23fcf04392497b092043eb0b87de86cc9f48"
+  },
+  {
+    "path": "data/Makefile",
+    "sha256": "95d3110002314b7c7b0e2b41eb4f6c04ffb36c172a1a6e3b125d95583aa7033b"
+  },
+  {
+    "path": "data/mask.pcx",
+    "sha256": "e424646a359cf895106a443df59bf186e0967c4c0479422fd858229abe28fb78"
+  },
+  {
+    "path": "data/menu.pcx",
+    "sha256": "eb300f8fea04d6398b7a65284dd89795bc43386e89744ccb435a031c5506f31c"
+  },
+  {
+    "path": "data/menumask.pcx",
+    "sha256": "9485d027a0e46124d989b5e28da2cf60087756419b3a992b52ab650125339eb2"
+  },
+  {
+    "path": "data/numbers.pcx",
+    "sha256": "d2162d5e4ce42a81d174a6cc8418f1a383673042a0d4772460405dc99f4cb8a2"
+  },
+  {
+    "path": "data/numbers.txt",
+    "sha256": "617764cac9ab002b7416cfd13cfe57396ac3cdbe15d94fc9da3f1734a81ef95d"
+  },
+  {
+    "path": "data/objects.pcx",
+    "sha256": "2c4e3fe820b8a9c799650d2b549edbbbdd49d675c4e6bff52ab738926b01c18c"
+  },
+  {
+    "path": "data/objects.txt",
+    "sha256": "99386824b71e4c7d0733c3181075f4a901c945066fabdbafb20d4708d2a02a98"
+  },
+  {
+    "path": "data/pack.bat",
+    "sha256": "107e4428a1cdbe783fa109a23d93c9a4db2a2a39cd34006fea9e475799bf6ead"
+  },
+  {
+    "path": "data/rabbit.pcx",
+    "sha256": "2de864af43ada293bd43af372a9245a19a454245552b2cdd892e4bd75e81a4ed"
+  },
+  {
+    "path": "data/rabbit.txt",
+    "sha256": "cd7faf4a226069fbb65ab297ce29eee16770728f2bb375e146c23c3be4d9338e"
+  },
+  {
+    "path": "data/scores.mod",
+    "sha256": "934ad077fee739d64bf75c4fb3d4627c520b4eee18b370ca8b084158c01893a1"
+  },
+  {
+    "path": "data/splash.smp",
+    "sha256": "6123ab8708a182864c8cfbff457c0a3db579d54c942c7661ea1fd58b1eb62c8b"
+  },
+  {
+    "path": "data/spring.smp",
+    "sha256": "0ee18898d20e9860bba53aa6ec916c80dd603194079a0a6fb24e4a912b17926a"
+  },
+  {
+    "path": "dist/jumpnbump-menu.desktop",
+    "sha256": "68eb5bfff0f8aba32d235f70d6557311e878d23d4239b704c618cca6375ee7f8"
+  },
+  {
+    "path": "dist/jumpnbump.6",
+    "sha256": "b4a3884489cfd1a3e16ce668db52cf5477bdc16b6e09fc5950034089554817be"
+  },
+  {
+    "path": "dist/jumpnbump.appdata.xml",
+    "sha256": "ccdf0337e1fbd8e1d746b2a4075232dab0c62a996528dc5522c8ab9c791db6de"
+  },
+  {
+    "path": "dist/jumpnbump.desktop",
+    "sha256": "32b36c7fd83c9b352c325b8ee365e5943f1679a8640bec10c083d48196f8c766"
+  },
+  {
+    "path": "dist/jumpnbump.ico",
+    "sha256": "19c9afabee19d46b9a18bf279fcbaf2b12c72dc8614f9069f0bb9af29f66396d"
+  },
+  {
+    "path": "dist/jumpnbump.png",
+    "sha256": "9ca8a09d29e82254ac8b03d57d1f221847850e1a0705cb745e5e45ac6fc79c1b"
+  },
+  {
+    "path": "dist/screenshot.png",
+    "sha256": "2a4133b5017d9f431442b69469d162bc2f7aeddac91686cbb65d11e1494975f7"
+  },
+  {
+    "path": "dj.h",
+    "sha256": "f686e2daa19a55ff84069dbaf0dbc42fbcee0c03c92b26f5115fd9003dbf5a23"
+  },
+  {
+    "path": "docs/gob.txt",
+    "sha256": "5ac813317367fe9bcbc9992a4dee2df477e2977164ab94aced14f7254f967b38"
+  },
+  {
+    "path": "docs/jumpnbump.html",
+    "sha256": "112e38337dbe5ce7e5e4c7e8a402235295c8dacfa10c1404b7d61ec3026dceec"
+  },
+  {
+    "path": "docs/levelmaking/jumpnbump_levelmaking.htm",
+    "sha256": "687d19eb088668fd276a0af666a7612c3bac851f21e6bcf7b64903c12af1ad42"
+  },
+  {
+    "path": "docs/levelmaking/level.pcx",
+    "sha256": "d8577abb120d1f88f83c93dd8b6342cd1ed8eb4d9d4a1b034f94ebda38ed9913"
+  },
+  {
+    "path": "docs/levelmaking/making1.gif",
+    "sha256": "19ea7094ac30c8e9570ff4e6a898b456fe6b3b3be88ec4cdc4f3db3aafdd1dcf"
+  },
+  {
+    "path": "docs/levelmaking/making2.gif",
+    "sha256": "cbd1027e17b575cba5de11278e8fb1b76f08570a11d9ccb217ed83f403790090"
+  },
+  {
+    "path": "docs/levelmaking/making3.gif",
+    "sha256": "290d0442d0678cb2b31752aa264ac7a758d7928e137cd4b819a01e76622dc95d"
+  },
+  {
+    "path": "docs/levelmaking/pack.gif",
+    "sha256": "55b7174e51f88d4a7d650f3838ca36def245560356f904941c39293975c7e958"
+  },
+  {
+    "path": "docs/LINKS",
+    "sha256": "56b793777876f477091fba64f9b5b84db37cd9a8a3ae751210f37496b7b85820"
+  },
+  {
+    "path": "docs/original_readme.txt",
+    "sha256": "c4fce88b2bebe6ea401ed404dac6a554856aeb870bee3fddba72b551ce43afe2"
+  },
+  {
+    "path": "docs/source_release.txt",
+    "sha256": "beb3994c25c338b268caaa721747ec9c47d7b097ca097ac1d406366bb5072b8d"
+  },
+  {
+    "path": "filter.c",
+    "sha256": "2e392737e41438f4b7fabc55258583d8d5152c75cd4abc5ba69b0885d3e2e240"
+  },
+  {
+    "path": "filter.h",
+    "sha256": "00f7aa84f794b35f1768ded4c97bcd4823d0834751ef0b6d2a3f150cbcbefe18"
+  },
+  {
+    "path": "globals.pre",
+    "sha256": "0e5560789c07d98677a6ae8f816232dd0969beb590b53732c778aa47b7ce4c36"
+  },
+  {
+    "path": "main.c",
+    "sha256": "55b59b1ddc758f97f733a8ccc3969d5af33fac9c34fb747c74098efe20e7e7ae"
+  },
+  {
+    "path": "Makefile",
+    "sha256": "2c74fdb0ff1bd6234f1be83f7282e213e828bfb5078c797bcee599bb45cdf0ee"
+  },
+  {
+    "path": "menu/jumpnbump_menu.glade",
+    "sha256": "9baf4ab489a8e710c623af22fcff4c18accf69230093c4933bb25adac156fb4d"
+  },
+  {
+    "path": "menu/jumpnbump_menu.py.pre",
+    "sha256": "8785bef3dd7b2661c8857b398a9f8039dbf6593af01e29ea9ae58160a02c11b3"
+  },
+  {
+    "path": "menu/Makefile",
+    "sha256": "19cfb627eacf746ed1847e9f2f90a8a5df351d6ac743ada421faf0dc215b1a19"
+  },
+  {
+    "path": "menu/po/fr.po",
+    "sha256": "0aa76f178fbc787ec8f7df2c0d26b364f24b6a93107b7b8d871579fbd93d698c"
+  },
+  {
+    "path": "menu/po/jumpnbump-menu.pot",
+    "sha256": "6479865d21e1edbbf2752ad621a4bc1fc980417745e7c4030fad8f19ac835eb0"
+  },
+  {
+    "path": "menu/po/Makefile",
+    "sha256": "083366967d980784144fad400cb8c5b2e1ed925d96f8b79d8aa240410a95214a"
+  },
+  {
+    "path": "menu.c",
+    "sha256": "9f6bdf33eeeefbcd7c3a34be36b639452a9b9188c1e220361c32092f7ba9b652"
+  },
+  {
+    "path": "modify/gobpack.c",
+    "sha256": "bea04f3c0b2b2f2e9a2289453c40121f040cc44ace7e0c435b1d35059bdb2f98"
+  },
+  {
+    "path": "modify/jnbpack.c",
+    "sha256": "e2db6c6a69b99c79dadafe0c36adf478a6152ca9628ea54a653e54c82b1c51aa"
+  },
+  {
+    "path": "modify/jnbunpack.c",
+    "sha256": "71cc91358efaa2b3f4977308582a0476d947b4f7d2fa38888a55482f3fb3fb88"
+  },
+  {
+    "path": "modify/Makefile",
+    "sha256": "b783952da17a0515685cf7120aa4db3faa8549bd5a960843a7744d481f041e68"
+  },
+  {
+    "path": "network.c",
+    "sha256": "a3a17b4247b268c4f2b1f7f0b87b92b0e9bad85d4113ff580169dbb3c69d3860"
+  },
+  {
+    "path": "network.h",
+    "sha256": "dcbcd8a04b52866700e7c41b3a71c8228864022a9104be0c19b599b5df43c6d0"
+  },
+  {
+    "path": "sdl/gfx.c",
+    "sha256": "9234480d6f80247463701b1c3d4a22746ebe489fe444a81f19a10fedb281992a"
+  },
+  {
+    "path": "sdl/input.c",
+    "sha256": "d33aaa232a8cba87eb78ae99b72510e88a3bd2e38050db9ed9f3c15864e2d598"
+  },
+  {
+    "path": "sdl/interrpt.c",
+    "sha256": "03bd957ee844b4a387f009371994e7f78cac8c832133d44560523a7c0ae0de47"
+  },
+  {
+    "path": "sdl/jumpnbump128.xpm",
+    "sha256": "fed57230801ceee8199e600c7c231a00a7c3054703faeeaf18f9683abb677ee4"
+  },
+  {
+    "path": "sdl/jumpnbump32.xpm",
+    "sha256": "b2336aec7d081a233966419dadcc4d4ad3c77b50b0db2937b7c9624bed6247f1"
+  },
+  {
+    "path": "sdl/jumpnbump64.xpm",
+    "sha256": "b7535b94bd42f559e2dba0942f90dc64f706a2e1f77cbec3d1929ab097c31de4"
+  },
+  {
+    "path": "sdl/Makefile",
+    "sha256": "7159a2132245f18e0892f46dc66c8759e0426bd68e865215523358a742a0cae3"
+  },
+  {
+    "path": "sdl/sound.c",
+    "sha256": "08d9dc03b32382dd634710f2d4fa0f8a6121217304cb7cf17d9f9c96447a4ed9"
+  },
+  {
+    "path": "web_bridge.c",
+    "sha256": "caa7455f234111a5ab4730a1642e68342b39909b5f7b3af83c107834a6b8f072"
+  },
+  {
+    "path": "web_bridge.h",
+    "sha256": "0134cfc41dddb6cfa1d30105039aba6c3b3e865fce75f592a59fc6c8fe3bd689"
+  }
+]
