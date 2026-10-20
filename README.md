@@ -62,3 +62,7 @@ first web port is claimed.
 [Exact deployed corresponding source](https://assets.oldgamesarchive.org/games/native/jump-n-bump/84297d297886fbd5a0478a48ead28c64d5278a94563ffadd3bc7df3c80c46297/source.zip)
 SHA-256: `b7df85dbffcd0152e884f19b2d7bed77f016331e94f5d2e1ca3225c8619dadc9`.
 This branch exposes the fixes as reviewable source files. See [BUILD.md](BUILD.md).
+
+The focused scancode fix and regression test were submitted upstream as
+[midzer/jumpnbump#1](https://github.com/midzer/jumpnbump/pull/1).
+The full browser integration stays on this branch for separate review.
